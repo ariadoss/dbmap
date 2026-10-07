@@ -38,4 +38,5 @@ if [ -z "$PYTHON" ]; then
   exit 1
 fi
 
+export PYTHONPATH="$REPO_DIR${PYTHONPATH:+:$PYTHONPATH}"
 exec "$PYTHON" -m "$MODULE" "$@"
